@@ -1,1 +1,82 @@
-Welcome aqui
+<nz-select class="full-width" nzShowSearch nzAllowClear nzPlaceHolder="Select OS" [(ngModel)]="selectedOS">
+    <nz-option nzCustomContent nzLabel="Windows" nzValue="windows"><i nz-icon nzType="windows"></i> Windows</nz-option>
+    <nz-option nzCustomContent nzLabel="Mac" nzValue="mac"><i nz-icon nzType="apple"></i> Mac</nz-option>
+    <nz-option nzCustomContent nzLabel="Android" nzValue="android"><i nz-icon nzType="android"></i> Android</nz-option>
+</nz-select> 
+
+<div nz-row>
+  <div nz-col nzSpan="16">
+    Ingresos
+  </div>
+  <div nz-col nzSpan="8">
+    $15000.00
+  </div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="16">
+      Gastos
+    </div>
+    <div nz-col nzSpan="8">
+      $300.00
+    </div>
+  </div>
+<div nz-row>
+    <div nz-col nzSpan="16">
+      Saldo total
+    </div>
+    <div nz-col nzSpan="8">
+      $140,700.00
+    </div>
+  </div>
+<!--
+-->
+  <div>
+    <div>
+      <div class="chart">
+        <canvas baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [colors]="pieChartColors"
+        [legend]="pieChartLegend"
+          >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <button mat-button mat-raised-button color="primary" (click)="pieChartLegend=!pieChartLegend">Toggle Legend</button>
+    <button mat-button mat-raised-button color="primary" (click)="changeLabels()">Change Labels</button>
+    <button mat-button mat-raised-button color="primary" (click)="addSlice()">Add Slice</button>
+    <button mat-button mat-raised-button color="primary" (click)="removeSlice()">Remove Slice</button>
+    <button mat-button mat-raised-button color="primary" (click)="changeLegendPosition()">Change Legend Position</button>
+  </div>
+
+  <div style="margin-bottom: 8px;"><button nz-button (click)="change()">Switch Data</button></div>
+
+  <nz-list 
+    [nzDataSource]="data" 
+    [nzRenderItem]="item" 
+    [nzItemLayout]="'horizontal'" 
+    [nzLoading]="loading">
+      <ng-template #item let-item>
+        <nz-list-item
+          [nzContent]="'content'"
+          [nzActions]="[editAction]"
+        >
+        <ng-template #editAction><a (click)="edit(item)">edit</a></ng-template>
+          <nz-list-item-meta
+            [nzTitle]="nzTitle"
+            nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+            nzDescription="Algo aqui"
+          >
+            <ng-template #nzTitle>
+              <a href="https://ng.ant.design">{{ item.title }}</a>
+            </ng-template>
+          </nz-list-item-meta>
+        </nz-list-item>
+      </ng-template>
+    </nz-list>
