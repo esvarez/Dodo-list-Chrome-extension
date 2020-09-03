@@ -1,27 +1,23 @@
 {
-   "name": "Dodo List Extension",
-   "version": "0.0.1",
-   "description": "Version alpha of Dodo List to Chrome",
-   "permissions": ["activeTab", "declarativeContent", "storage"],
-   "options_page": "/src/page_options/page_options.html",
-   "background": {
-      "scripts": ["/src/bg/background.js"],
-      "persistent": false
-   },
-   "page_action": {
-      "default_popup": "/src/page_action/page_action.html",
-      "default_icon": {
-         "16": "/icons/get_started16.png",
-         "32": "/icons/get_started32.png",
-         "48": "/icons/get_started48.png",
-         "128": "/icons/get_started128.png"
-      }
-   },
-   "icons": {
-      "16": "/icons/get_started16.png",
-      "32": "/icons/get_started32.png",
-      "48": "/icons/get_started48.png",
-      "128": "/icons/get_started128.png"
-   },
-   "manifest_version": 2
+  "name": "Dodo List Extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Version alpha of Dodo List to Chrome",
+  "homepage_url": "https://ericksuarez.dev",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "options_page": "src/options_custom/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  }
 }
