@@ -1,20 +1,13 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// if you checked "fancy-settings" in extensionizr.com, uncomment this lines
 
-'use strict';
+// var settings = new Store("settings", {
+//     "sample_setting": "This is how you use Store.js to remember values"
+// });
 
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log("The color is green.");
+
+//example of using a message handler from the inject scripts
+chrome.extension.onMessage.addListener(
+  function(request, sender, sendResponse) {
+  	chrome.pageAction.show(sender.tab.id);
+    sendResponse();
   });
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-   chrome.declarativeContent.onPageChanged.addRules([{
-     conditions: [new chrome.declarativeContent.PageStateMatcher({
-       pageUrl: {hostEquals: 'developer.chrome.com'},
-     })
-     ],
-         actions: [new chrome.declarativeContent.ShowPageAction()]
-   }]);
- });
-});
