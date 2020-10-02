@@ -2,14 +2,50 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.formDodo{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+				
+			label.input{
+				position: relative;
+			}
+				
+			input[type="text"].newDodo{
+				border: none;
+				width: 400px;
+				height: 30px;
+				padding: 0 15px;
+			}
+				
+			button.btnAddDodo{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				background-color: #2ccd78;
+				color: white;
+				padding: 0 15px;
+				letter-spacing: 1.2px;
+				font-family: sans-serif;
+				font-size: 12px;
+				border: none;
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="mainPopup">
 			<h1>Dodos!</h1>
-			<div class="header">
-				<input type="text" name="dodoText" id="dodoText" placeholder="New dodo">
-				<button id="btnAddDodo" class="addDodo">Add Dodo</button>
-			</div>		
+			<div class="formDodo"> 
+				<label class="input">
+					<input type="text" name="dodoText" id="dodoText" class="newDodo" placeholder="New Dodo..." required>
+					<button id="btnAddDodo" class="btnAddDodo" type="submit">Add Dodo</button>
+				</label>
+			</div>
+
 			<div>
 				<ul id="dodoList">		
 					<li>
