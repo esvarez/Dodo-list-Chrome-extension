@@ -2,14 +2,50 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.formDodo{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+				
+			label.input{
+				position: relative;
+			}
+				
+			input[type="text"].newDodo{
+				border: none;
+				width: 400px;
+				height: 30px;
+				padding: 0 15px;
+			}
+				
+			button.btnAddDodo{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				background-color: #2ccd78;
+				color: white;
+				padding: 0 15px;
+				letter-spacing: 1.2px;
+				font-family: sans-serif;
+				font-size: 12px;
+				border: none;
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="mainPopup">
 			<h1>Dodos!</h1>
-			<div class="header">
-				<input type="text" name="dodoText" id="dodoText" placeholder="New dodo">
-				<button id="btnAddDodo" class="addDodo">Add Dodo</button>
-			</div>		
+			<div class="formDodo"> 
+				<label class="input">
+					<input type="text" name="dodoText" id="dodoText" class="newDodo" placeholder="New Dodo..." required>
+					<button id="btnAddDodo" class="btnAddDodo" type="submit">Add Dodo</button>
+				</label>
+			</div>
+
 			<div>
 				<ul id="dodoList">		
 					<li>Mark as Done<button class="btnDodoDone">Done</button><button class="btnDodoDone">Delete</button>
@@ -23,3 +59,7 @@
 
 https://codepen.io/CucuIonel/pen/BiCAH
 https://codepen.io/andytran/pen/WrPdoO
+https://dribbble.com/shots/2589690-Be-amazing-today
+https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.es0kq0qhg
+https://codemyui.com/minimal-todo-list-design-snippet/
+
