@@ -1,65 +1,25 @@
 <!doctype html>
 <html>
 	<head>
-		<link rel="stylesheet" href="./css/styles.css">
-		<style>
-			.formDodo{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-				
-			label.input{
-				position: relative;
-			}
-				
-			input[type="text"].newDodo{
-				border: none;
-				width: 400px;
-				height: 30px;
-				padding: 0 15px;
-			}
-				
-			button.btnAddDodo{
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				background-color: #2ccd78;
-				color: white;
-				padding: 0 15px;
-				letter-spacing: 1.2px;
-				font-family: sans-serif;
-				font-size: 12px;
-				border: none;
-				cursor: pointer;
-			}
-		</style>
+		<link rel="stylesheet" href="./css/styles.css">		
 	</head>
 	<body>
-		<div id="mainPopup">
+		<div class="main">
 			<h1>Dodos!</h1>
-			<div class="formDodo"> 
-				<label class="input">
-					<input type="text" name="dodoText" id="dodoText" class="newDodo" placeholder="New Dodo..." required>
-					<button id="btnAddDodo" class="btnAddDodo" type="submit">Add Dodo</button>
-				</label>
-			</div>
-
-			<div>
-				<ul id="dodoList">		
-					<li>Mark as Done<button class="btnDodoDone">Done</button><button class="btnDodoDone">Delete</button>
-					</li>			
+			<input type="text" id="dodoText" class="new_dodo" placeholder="New Dodo...">
+			<button id="btnAddDodo" class="btn_add_dodo" >Add Dodo</button>        	
+			<div class="dodos_body">
+				<ul id="dodoList" class="dodos">
+					<li class="dodo">
+						<label class="dodo_label">
+							<input type="checkbox"><span>New dodo</span>
+							<div class="dodo_mark"></div>
+						</label>
+					</li>
 				</ul>
 			</div>
-		</div>		
+		</div>
+		
 		<script src="./js/script.js"></script>
 	</body>
 </html>
-
-https://codepen.io/CucuIonel/pen/BiCAH
-https://codepen.io/andytran/pen/WrPdoO
-https://dribbble.com/shots/2589690-Be-amazing-today
-https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.es0kq0qhg
-https://codemyui.com/minimal-todo-list-design-snippet/
-
