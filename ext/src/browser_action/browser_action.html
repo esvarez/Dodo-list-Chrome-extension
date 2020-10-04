@@ -1,33 +1,25 @@
 <!doctype html>
 <html>
 	<head>
-		<style type="text/css">
-			#mainPopup {
-				padding: 10px;
-				height: 400px;
-				width: 420px;
-				font-family: Helvetica, Ubuntu, Arial, sans-serif;
-			}
-			h1 {
-				font-size: 2em;
-			}
-		</style>
-
+		<link rel="stylesheet" href="./css/styles.css">		
 	</head>
 	<body>
-		<div id="mainPopup">
+		<div class="main">
 			<h1>Dodos!</h1>
-			<div class="header">
-				<input type="text" name="dodoText" id="dodoText" placeholder="New dodo">
-				<button id="btnAddDodo" class="addDodo">Add Dodo</button>
-			</div>		
-			<div>
-				<ul id="dodoList">		
-					<li>Mark as Done<button class="btnDodoDone">Done</button><button class="btnDodoDone">Delete</button>
-					</li>			
+			<input type="text" id="dodoText" class="new_dodo" placeholder="New Dodo...">
+			<button id="btnAddDodo" class="btn_add_dodo" >Add Dodo</button>        	
+			<div class="dodos_body">
+				<ul id="dodoList" class="dodos">
+					<li class="dodo">
+						<label class="dodo_label">
+							<input type="checkbox"><span>New dodo</span>
+							<div class="dodo_mark"></div>
+						</label>
+					</li>
 				</ul>
 			</div>
-		</div>		
+		</div>
+		
 		<script src="./js/script.js"></script>
 	</body>
 </html>
