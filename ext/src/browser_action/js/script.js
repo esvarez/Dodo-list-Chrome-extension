@@ -65,17 +65,14 @@ function markDone(e) {
 
 function storageDodo(id, dodoName) {
    let dodo = { id: id, dodo: dodoName }
-   chrome.storage.sync.get('dodos', function(result) {
-      console.log(result.dodos);      
+   chrome.storage.sync.get('dodos', function(result) {      
       if (result.dodos === undefined) {
          result.dodos = [{dodo}]
       } else {
          result.dodos.push(dodo)
       }
-      chrome.storage.sync.set({'dodos': result.dodos}, function() {
-         console.log('Value is set to ' + result.dodos);
-         console.log(result.dodos);
-         });
+      chrome.storage.sync.set({'dodos': result.dodos}, function() {         
+      });
    });   
 }
 
@@ -88,8 +85,6 @@ function removeDodoStoage(id) {
          }         
       }
       chrome.storage.sync.set({'dodos': result.dodos}, function() {
-         console.log('Value is set to ' + result.dodos);
-         console.log(result.dodos);
       });
    });
 }
