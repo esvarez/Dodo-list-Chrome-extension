@@ -4,7 +4,7 @@ function DodoList(props:any) {
 	return(
 		<React.Fragment>
 			<span>DodoList works!</span>
-			<ul>
+			<ul className='list-none'>
 				{props.children}
 			</ul>
 		</React.Fragment>
