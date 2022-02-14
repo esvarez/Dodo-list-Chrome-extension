@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddTodo() {
+export const AddTodo = () => {
   return(
 		<React.Fragment>
 			<div>
@@ -15,13 +15,17 @@ function AddTodo() {
 						type='text'
 						name='dodo'		
 						id='dodo'				
-						className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 sm:text-sm border-gray-300 rounded-md'
+						className='focus:ring-primary focus:border-primary block w-full pl-7 sm:text-sm border-gray-300 rounded-md'
 						placeholder='Salir a caminar'
 					/>					
 				</div>							
-				<span className='flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1'>
-					Invalid username field !
+				<span className='flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-2'>
+					Dodo no valido!
 				</span>
+				<div className='flex justify-end'>
+					<button className='mr-2 bg-secondary rounded-md text-regular-bk py-1 px-2'>Cancelar</button>
+					<button className='bg-primary rounded-md text-regular-bk py-1 px-2'>Crear</button>
+				</div>				
 			</div>
 		</React.Fragment>        
   );
