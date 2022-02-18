@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const AddTodo = () => {
+export const AddDodo = () => {
   return(
 		<React.Fragment>
 			<div>
-				<label htmlFor="dodo" className='block text-sm font-medium text-gray-700'>
+				<label htmlFor='dodo' className='block text-sm font-medium text-gray-700'>
 					Nuevo dodo
 				</label>
 				<div className='mt-1 relative rounded-md shadow-sm'> 
@@ -15,7 +15,7 @@ export const AddTodo = () => {
 						type='text'
 						name='dodo'		
 						id='dodo'				
-						className='focus:ring-primary focus:border-primary block w-full pl-7 sm:text-sm border-gray-300 rounded-md'
+						className='focus:blue-500 focus:blue-500 block w-full pl-7 sm:text-sm border-gray-300 rounded-md'
 						placeholder='Salir a caminar'
 					/>					
 				</div>							
@@ -23,15 +23,13 @@ export const AddTodo = () => {
 					Dodo no valido!
 				</span>
 				<div className='flex justify-end'>
-					<button className='mr-2 bg-secondary rounded-md text-regular-bk py-1 px-2'>Cancelar</button>
-					<button className='bg-primary rounded-md text-regular-bk py-1 px-2'>Crear</button>
-				</div>				
+        	<button type='button' className='inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto md:text-sm'>Cancelar</button>
+        	<button type='button' className='ml-3 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-xs font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto md:text-sm'>Crear</button>
+      	</div>				
 			</div>
 		</React.Fragment>        
   );
 }
-
-export default AddTodo;
 
 /*
     

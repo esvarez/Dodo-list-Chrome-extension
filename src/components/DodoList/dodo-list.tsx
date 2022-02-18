@@ -8,5 +8,3 @@ export const DodoList = (props:any) => {
 		</React.Fragment>
 	)
 }
-
-export default DodoList;
